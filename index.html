@@ -24,6 +24,7 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="reboot.css" rel="stylesheet">
     <title>Your Website</title>
 </head>
 
@@ -32,6 +33,9 @@
     <nav class="custom-nav">
         <div class="custom-nav-brand">
             <span class="custom-nav-title">Your Website</span>
+        </div>
+        <div class="ham" id="nav-ham">
+            <img src="assets/img/ham_burger.svg">
         </div>
         <ul class="custom-nav-menu" id="navbarMenuDesktop">
             <li><a href="#hero">Home</a></li>
@@ -42,9 +46,8 @@
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="custom-nav-auth">
-            <a href="login.html" class="auth-button">Login</a>
-            <a href="register.html" class="auth-button">Register</a>
+        <div class="custom-nav-auth" id="loginButton">
+            <a href="login_and_register.html" class="auth-button">Login</a>
         </div>
     </nav>
     <!-- end Navbar -->
@@ -606,7 +609,23 @@
     <script src="assets/js/main.js"></script>
 
     <!-- JS -->
-    <script src="script.js"></script>
+    <script>
+        const navToggle = document.getElementById('nav-ham')
+        navToggle.addEventListener('click', () => {
+            var navbarMenu = document.getElementById('navbarMenuDesktop');
+            var navLoginButton = document.getElementById('loginButton');
+            if (navbarMenu) {
+                if (this.checked === undefined) {
+                    navbarMenu.style.display = 'flex';
+                    navLoginButton.style.display = 'block'
+                    navbarMenu.style.flexDirection = 'column';
+                    navToggle.style.display= 'none';
+                } else {
+                    navbarMenu.style.display = 'none';
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>

@@ -24,27 +24,7 @@ body, ul {
 }
 
 .custom-nav a.active {
-    border-bottom: 2px solid rgb(90, 13, 166);
-}
-
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-    .custom-nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .custom-nav-menu {
-        margin-top: 10px;
-    }
-
-    .custom-nav-menu li {
-        margin: 10px 0;
-    }
-
-    .custom-nav-auth {
-        margin-top: 10px;
-    }
+    border-bottom: 2px solid rgba(86, 58, 250, 0.902);
 }
 
 .custom-nav-brand {
@@ -106,3 +86,21 @@ body, ul {
     background-color: white; /* Change background on hover */
     color: blue; /* Change text color on hover */
 }
+
+.ham {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .ham {
+        display: block;
+    }
+    .custom-nav-menu {
+        display: none;
+    }
+    .custom-nav-auth {
+        display: none;
+    }
+}
+
+
