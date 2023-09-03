@@ -422,13 +422,6 @@ h6 {
   display: block;
 }
 
-
-/* .auth-login-button {
-  padding: 6px 8px;
-  border: 1px solid #fff;
-  border-radius: 6px;
-} */
-
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -673,6 +666,11 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.col-lg-6,
+.col-md-6 {
+    margin-bottom: 20px; /* Adjust this value to control the spacing */
+}
+
 .services .icon-box {
   text-align: center;
   padding: 70px 20px 80px 20px;
